@@ -16,3 +16,5 @@ Checked in installed Chrome on October 14, 2026 against the local HTTP server.
 Accessibility provisions: semantic landmarks, labeled controls, native validation, native FAQ disclosure, visible keyboard focus, skip link, menu expanded state, live form status, reduced-motion preference, no external fonts or trackers. A comprehensive assistive-technology audit has not been performed.
 
 Not verified: live webhook delivery, production hosting, domain ownership/DNS, real contact details, account deployment. These require the intended account and service configuration.
+
+Portfolio update: captured CAN U Football and Gridlocks from their live homepages, added descriptive links and screenshots, and repeated the four-width responsive and quote-flow checks successfully. These screenshots do not certify live data accuracy or service availability.
