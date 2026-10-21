@@ -32,13 +32,13 @@ Choose the correct account/team and create a **new** project. Do not link to an 
 
 ## Contact details and live form delivery
 
-Edit `CONFIG` at the top of `public/app.js`: set Susan's real `phone` (international format for tel links) and `email`. Null values deliberately display marked placeholders.
+Edit `CONFIG` at the top of `public/app.js`: set your business’s real `phone` (international format for tel links) and `email`. Null values deliberately display marked placeholders.
 
 The form initially prepares a downloadable text request locally. It does not claim to send or silently upload personal details. The server returns HTTP 503 when delivery is unconfigured.
 
 To enable actual delivery:
 
-1. Configure a trusted HTTPS enquiry webhook that accepts JSON, persists the enquiry or delivers it to Susan, and responds with a successful HTTP status **only after accepting it**. Choose a service with spam controls, rate limits, delivery monitoring, and appropriate privacy handling. An arbitrary URL that returns 200 is not proof of email delivery.
+1. Configure a trusted HTTPS enquiry webhook that accepts JSON, persists the enquiry or delivers it to your team, and responds with a successful HTTP status **only after accepting it**. Choose a service with spam controls, rate limits, delivery monitoring, and appropriate privacy handling. An arbitrary URL that returns 200 is not proof of email delivery.
 2. In Vercel Project Settings → Environment Variables add `LEAD_WEBHOOK_URL`; optionally add secret `LEAD_WEBHOOK_TOKEN`. Keep these server-only. Never put credentials in app.js or commit them. Configure the correct preview and production environments.
 3. Update the privacy notice in `public/index.html` with the chosen provider, contact address, and retention period. The existing notice is explicitly a preview notice.
 4. Redeploy and verify an actual test enquiry arrives at the intended destination. Check error handling with a temporarily invalid destination. Then set `deliveryEnabled:true` in `public/app.js` and redeploy.
